@@ -16,7 +16,7 @@ export const ME_QUERY = gql`
 
 function useUser() {
   const hasToken = useReactiveVar(isLoggedInVar);
-  const { data, error } = useQuery(ME_QUERY, {
+  const { data } = useQuery(ME_QUERY, {
     skip: !hasToken,
   });
 

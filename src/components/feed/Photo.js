@@ -73,20 +73,6 @@ const Likes = styled(FatText)`
   display: block;
 `;
 
-const Comment = styled.div``;
-
-const CommentCaption = styled.span`
-  margin-left: 10px;
-`;
-
-const CommentCount = styled.span`
-  opacity: 0.7;
-  margin: 10px 0px;
-  display: block;
-  font-weight: 600;
-  font-size: 10px;
-`;
-
 function Photo({
   id,
   user,
@@ -121,7 +107,7 @@ function Photo({
       });
     }
   };
-  const [toggleLikeMutation, { loading }] = useMutation(TOGGLE_LIKE_MUTATION, {
+  const [toggleLikeMutation] = useMutation(TOGGLE_LIKE_MUTATION, {
     variables: {
       id,
     },

@@ -1,14 +1,13 @@
-import { gql, useApolloClient, useQuery, useMutation } from "@apollo/client";
+import { gql, useQuery, useMutation } from "@apollo/client";
 import { faComment, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import style from "styled-components";
 import Button from "../components/auth/Button";
 import PageTitle from "../components/PageTitle";
 import { FatText } from "../components/shared";
 import { PHOTO_FRAGMENT } from "../fragments";
-import useUser, { ME_QUERY } from "../hooks/useUser";
+import useUser from "../hooks/useUser";
 import TopHeader from "../components/Header";
 import { client } from "../apollo";
 
